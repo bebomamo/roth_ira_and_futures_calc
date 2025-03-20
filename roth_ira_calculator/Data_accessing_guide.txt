@@ -1,0 +1,26 @@
+The method for accessing price data from the markets I have compiled are 
+as follows, and all the data comes from GOOGLEFINANCE functions available 
+directly in google sheet. They are transfered to CSV's as follows.
+
+To download market data from Google Finance, use the GOOGLEFINANCE function in Google Sheets, specifying the ticker, attribute, start date, end date, and interval, then download the sheet as a CSV file. 
+Here's a more detailed explanation:
+1. Access Google Sheets:
+Open a new or existing Google Sheet. 
+You can do this through Google Drive (click the "+" New button and choose "Google Sheets") or by going directly to sheets.google.com. 
+2. Use the GOOGLEFINANCE Function:
+In a cell, type =GOOGLEFINANCE("ticker", "attribute", start_date, end_date, "interval").
+ticker: The ticker symbol for the security (e.g., "GOOG" for Alphabet).
+attribute: The specific data you want (e.g., "price", "priceopen", "high", "low", "volume", "marketcap").
+start\_date: The date to start retrieving data from (e.g., DATE(2023,1,1) for January 1, 2023).
+end\_date: The date to end retrieving data (e.g., DATE(2023,12,31) for December 31, 2023).
+interval: The frequency of data retrieval (e.g., "DAILY", "WEEKLY").
+Example: =GOOGLEFINANCE("GOOG", "price", DATE(2023,1,1), DATE(2023,12,31), "DAILY") 
+3. Download as CSV:
+Once the data is pulled into your sheet, go to "File" > "Download" > "Comma-separated values (.csv)".
+This will download the sheet as a CSV file containing the market data. 
+4. Additional Notes:
+Historical Data: You can access historical data by specifying start_date and end_date. 
+Real-Time Data: If you don't specify start_date and end_date, you'll get real-time data. 
+Attributes: Explore different attributes like "priceopen", "high", "low", "volume", "marketcap", "tradetime", "datadelay", "volumeavg", "pe", "eps", "high52", "low52". 
+Limitations: The data is not for financial industry professional use or use by other professionals at non-financial firms (including government entities). 
+Google Finance Function: The GOOGLEFINANCE function is a built-in function in Google Sheets, so you don't need to install anything. 
